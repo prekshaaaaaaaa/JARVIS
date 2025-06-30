@@ -60,7 +60,7 @@ app.post('/chat', (req, res) => {
 });
 app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use(express.static(path.join(__dirname, 'templates')));
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'login.html')));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 app.get('/gui.html', (req, res) => res.sendFile(path.join(__dirname, 'templates','gui.html')));
-
+app.get('/login.html', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 app.listen(3000, () => console.log('✅ Running on http://localhost:3000'));
